@@ -1,0 +1,9 @@
+<config>
+  <append xpath="/recipes">
+
+    <recipe name="BL_InjectorVanguard" count="1" craft_time="2">
+      <ingredient name="bloodlinesClassMutagen" count="1"/>
+    </recipe>
+
+  </append>
+</config>

@@ -1,0 +1,18 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text
+noteBloodlines01,items,Note,,,Bloodlines Note,
+noteBloodlines01Desc,items,Note,,,"You feel something dormant within you.\n\nThis note explains the Bloodlines system.\n\nChoose your class carefully. Your Bloodline shapes how you survive, fight, and evolve in this world.\n\nOnce chosen, your Bloodline cannot be changed without consequence.",
+
+bloodlinesNoteVanguard,items,Note,,,[B22222]Vanguard[-],
+bloodlinesNoteVanguardDesc,items,Note,,,"[B22222]Frontline Pressure[-]\n\nBuilt to stand where others fall.\n\n[B22222]Excels at[-]\n• Holding ground\n• Fighting outnumbered\n• Controlling space\n\n[B22222]Tradeoff[-]\n• Loud and stamina-hungry\n\n[B22222]Playstyle[-]\nStand firm. Draw the horde. Break it.",
+
+bloodlinesNoteMedic,items,Note,,,[22AA22]Medic[-],
+bloodlinesNoteMedicDesc,items,Note,,,"[22AA22]Sustain & Recovery[-]\n\nSurvive what should have killed you.\n\n[22AA22]Excels at[-]\n• Healing and recovery\n• Stabilising bad situations\n• Prolonged survival\n\n[22AA22]Tradeoff[-]\n• Lower burst damage\n\n[22AA22]Playstyle[-]\nOutlast the chaos. Refuse to die.",
+
+bloodlinesNoteMachinist,items,Note,,,[FFD700]Machinist[-],
+bloodlinesNoteMachinistDesc,items,Note,,,"[FFD700]Systems & Control[-]\n\nVictory through preparation.\n\n[FFD700]Excels at[-]\n• Tools and repairs\n• Traps and defences\n• Base efficiency\n\n[FFD700]Tradeoff[-]\n• Weaker in open combat\n\n[FFD700]Playstyle[-]\nPlan ahead. Let systems do the work.",
+
+bloodlinesNoteScout,items,Note,,,[00BFFF]Scout[-],
+bloodlinesNoteScoutDesc,items,Note,,,"[00BFFF]Mobility & Recon[-]\n\nAlways moving. Never trapped.\n\n[00BFFF]Excels at[-]\n• Travel and looting routes\n• Escape and repositioning\n• Map awareness\n\n[00BFFF]Tradeoff[-]\n• Fragile if cornered\n\n[00BFFF]Playstyle[-]\nMove fast. Strike smart. Disappear.",
+
+bloodlinesNotePredator,items,Note,,,[AA1AFD]Predator[-],
+bloodlinesNotePredatorDesc,items,Note,,,"[AA1AFD]Hunting & Lethality[-]\n\nEnd threats before they escalate.\n\n[AA1AFD]Excels at[-]\n• Eliminating priority targets\n• High single-target damage\n• Finishing fights quickly\n\n[AA1AFD]Tradeoff[-]\n• Struggles when swarmed\n\n[AA1AFD]Playstyle[-]\nPick targets. Kill clean. Move on.",

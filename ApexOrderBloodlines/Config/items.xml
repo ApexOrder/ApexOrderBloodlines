@@ -1,0 +1,174 @@
+<config>
+  <append xpath="/items">
+
+    <!-- injector: choose ONE class via crafting -->
+    <item name="bloodlinesClassMutagen">
+      <property name="CreativeMode" value="Player"/>
+      <property name="CustomIcon" value="bloodlines_mutagen"/>
+      <property name="CustomIconTint" value="ffffff"/>
+      <property name="ItemTypeIcon" value="star"/>
+      <property name="HoldType" value="45"/>
+      <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+      <property name="Material" value="Mmetal"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="Weight" value="0"/>
+      <property name="SellableToTrader" value="false"/>
+      <property name="Group" value="Special Items"/>
+    </item>
+
+    <item name="bloodlinesNoteBundle">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="DescriptionKey" value="readTheNote"/>
+	<property name="CustomIcon" value="bloodlines_note"/>
+	<property name="NoScrapping" value="true"/>
+	<property name="SoundPickup" value="map_grab"/>
+	<property name="SoundPlace" value="map_place"/>
+
+	<!-- Action0: Short intro popup -->
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0.3"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+		<property name="PromptTitle" value="bloodlinesNoteBundle"/>
+		<property name="PromptDescription" value="bloodlinesNoteBundleDesc"/>
+	</property>
+
+	<!-- Action1: Open bundle → create ALL class notes -->
+	<property class="Action1">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="bloodlinesNoteVanguard,bloodlinesNoteMedic,bloodlinesNoteMachinist,bloodlinesNoteScout,bloodlinesNotePredator"/>
+		<property name="Create_item_count" value="1,1,1,1,1"/>
+	</property>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".bloodlinesBundleRead" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<!-- VANGUARD -->
+<item name="bloodlinesNoteVanguard">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="DescriptionKey" value="readTheNote"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="NoScrapping" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0.3"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+		<property name="PromptTitle" value="bloodlinesNoteVanguard"/>
+		<property name="PromptDescription" value="bloodlinesNoteVanguardDesc"/>
+	</property>
+</item>
+
+<!-- MEDIC -->
+<item name="bloodlinesNoteMedic">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="DescriptionKey" value="readTheNote"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="NoScrapping" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0.3"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+		<property name="PromptTitle" value="bloodlinesNoteMedic"/>
+		<property name="PromptDescription" value="bloodlinesNoteMedicDesc"/>
+	</property>
+</item>
+
+<!-- MACHINIST -->
+<item name="bloodlinesNoteMachinist">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="DescriptionKey" value="readTheNote"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="NoScrapping" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0.3"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+		<property name="PromptTitle" value="bloodlinesNoteMachinist"/>
+		<property name="PromptDescription" value="bloodlinesNoteMachinistDesc"/>
+	</property>
+</item>
+
+<!-- SCOUT -->
+<item name="bloodlinesNoteScout">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="DescriptionKey" value="readTheNote"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="NoScrapping" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0.3"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+		<property name="PromptTitle" value="bloodlinesNoteScout"/>
+		<property name="PromptDescription" value="bloodlinesNoteScoutDesc"/>
+	</property>
+</item>
+
+<!-- PREDATOR -->
+<item name="bloodlinesNotePredator">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="DescriptionKey" value="readTheNote"/>
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="NoScrapping" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0.3"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+		<property name="PromptTitle" value="bloodlinesNotePredator"/>
+		<property name="PromptDescription" value="bloodlinesNotePredatorDesc"/>
+	</property>
+</item>
+
+
+    <!-- CLASS INJECTORS (crafted from injector, then USED) -->
+    <item name="BL_InjectorVanguard" extends="medicalFirstAidBandage">
+  <property name="CustomIcon" value="vanguard_injector"/>
+  <property name="CustomIconTint" value="ffffff"/>
+  <property name="ItemTypeIcon" value="star"/>
+  <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+  <property name="Material" value="Mmetal"/>
+  <property name="Stacknumber" value="1"/>
+  <property name="Weight" value="0"/>
+  <property name="SellableToTrader" value="false"/>
+  <property name="Group" value="Special Items"/>
+
+  <!-- optional: makes sure it doesn’t “behave like a bandage” in stats text -->
+  <property name="DisplayName" value="blVanguardInjectorName"/>
+  <property name="DescriptionKey" value="blVanguardInjectorDesc"/>
+
+  <effect_group tiered="false">
+    <!-- only allow once -->
+    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBloodlineVanguard">
+      <requirement name="NotHasBuff" buff="buffBloodlineChosen"/>
+    </triggered_effect>
+
+    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBloodlineChosen">
+      <requirement name="NotHasBuff" buff="buffBloodlineChosen"/>
+    </triggered_effect>
+  </effect_group>
+</item>
+
+  </append>
+</config>

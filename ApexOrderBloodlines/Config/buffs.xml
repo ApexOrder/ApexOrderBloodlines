@@ -1,0 +1,20 @@
+<config>
+  <append xpath="/buffs">
+
+    <buff name="buffBloodlineChosen" hidden="true" duration="0"/>
+
+    <buff name="buffBloodlineVanguard" hidden="false" duration="0">
+      <display_name value="blVanguardBuffName"/>
+      <description value="blVanguardBuffDesc"/>
+
+      <!-- Put your actual vanguard effects here later -->
+      <!-- Example placeholders (remove/replace): -->
+      <!--
+      <effect_group>
+        <passive_effect name="HealthMax" operation="base_add" value="10"/>
+      </effect_group>
+      -->
+    </buff>
+
+  </append>
+</config>

@@ -1,0 +1,15 @@
+<Bloodlines>
+
+	<!-- Remove default starter items from playerMale -->
+	<csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">noteDuke01</csv>
+	<csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">drinkJarBoiledWater*</csv>
+	<csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">foodCanChili</csv>
+	<csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">medicalFirstAidBandage</csv>
+	<csv xpath="/entity_classes/entity_class[@name='playerMale']/property[starts-with(@name, 'ItemsOnEnterGame')]/@value" delim="," op="remove">keystoneBlock</csv>
+
+  <!-- Force ONLY the Bloodlines note on new game entry -->
+  <set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">bloodlinesNoteBundle</set>
+  <set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">bloodlinesNoteBundle</set>
+  <set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">bloodlinesNoteBundle</set>
+
+</Bloodlines>
